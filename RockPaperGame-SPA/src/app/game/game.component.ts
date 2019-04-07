@@ -20,6 +20,7 @@ export class GameComponent implements OnInit {
   //              2 tie
   theResult = 0 
   enemySelected  = -1;
+  showClass= true;
 
  pick( weapon: number): void {
    this.playerSelected = weapon;

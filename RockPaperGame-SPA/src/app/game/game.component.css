@@ -19,21 +19,11 @@ p {
   align-items: center;
   justify-content: center;
 }
-/* mat-card-content{
-  display:grid;
-  grid-template-columns: 2fr 1fr;
-} */
-
-.content1{
-  
-  display:grid;
-  grid-template-columns: 2fr 1fr;
-}
 
 .score{
   margin-top:.5em;
   margin-left:2em;
-  font-size:1.5em
+  font-size:1.5em;
 }
 
 .content2{
@@ -52,4 +42,25 @@ p {
 
 .selectedWeaponEnemy{
   color: red;
+}
+
+.player2{
+  display: none;
+}
+
+.player1{
+  margin-left: 70%;
+  margin-top: 15%;
+  width: 100%;
+}
+
+.player2{
+  margin-left: 70%;
+  margin-top: 15%;
+  width: 100%;
+}
+
+.scoreP{
+margin-top: -300px;
+width: 300px;
 }

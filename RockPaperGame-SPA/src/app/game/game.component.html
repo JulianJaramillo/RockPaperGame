@@ -1,10 +1,7 @@
 <div class="content">
-  <mat-card>
+  <mat-card class="player1">
     <mat-card-content>
-      <div class="content1">
-        <h2> You</h2>
-        <button mat-fab color="primary" class="score">{{ scores[0] }}</button>
-      </div>
+      <h2> Player 1</h2>
       <h3> Choose your weapon: </h3>
       <div class="content2">
         <i (click)="pick(0)" [ngClass]="{'selectedWeapon':(playerSelected === 0)}" class="fa fa-hand-rock-o"></i>
@@ -13,12 +10,9 @@
       </div>
     </mat-card-content>
   </mat-card>
-  <mat-card>
+  <mat-card class="player2">
     <mat-card-content>
-      <div class="content1">
-        <h2> Player 2</h2>
-        <button mat-fab color="accent" class="score">{{ scores[1]}}</button>
-      </div>
+      <h2> Player 2</h2>
       <h3> Choose your weapon: </h3>
       <div class="content2">
         <i (click)="pickEnemy(0)" [ngClass]="{'selectedWeaponEnemy':(enemySelected === 0)}" class="fa fa-hand-rock-o"></i>
@@ -29,7 +23,25 @@
   </mat-card>
 
 </div>
-<div *ngIf="!loading && isResultShow" class="flex-container flex-center" style="flex-direction: column">
+
+<mat-card class="scoreP">
+  <h1>Score</h1>
+    <mat-card-content>
+      <div>
+          <h2> You</h2>
+          <button mat-fab color="primary" class="score">{{ scores[0] }}</button>
+        </div>
+    </mat-card-content>
+    <mat-card-content>
+        <div>
+            <h2> Player 2</h2>
+            <button mat-fab color="accent" class="score">{{ scores[1]}}</button>
+          </div>
+      </mat-card-content>
+  </mat-card>
+
+
+<div *ngIf="isResultShow" class="flex-container flex-center" style="flex-direction: column">
   <div [ngSwitch]="theResult">
     <ng-template [ngSwitchCase]="0">
       <h1> You're the winner! </h1>

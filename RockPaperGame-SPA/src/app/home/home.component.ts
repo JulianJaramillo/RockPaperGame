@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelect(player1,player2){
-  this.router.navigate(['/game',player1,player2]);  
+  onSelect(player1, player2) {
+    this.router.navigate(['/game', player1, player2]);
   }
 }

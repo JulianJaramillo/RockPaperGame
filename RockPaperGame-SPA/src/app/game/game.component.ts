@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-game',
@@ -56,18 +57,19 @@ export class GameComponent implements OnInit {
       this.theResult = 0;
       this.scores[0] = this.scores[0] + 1;
       if (this.scores[0] == 3) {
-        this.scores = [0, 0];
+        this.router.navigate(['/results', this.playerName]);
       }
     } else {
       this.theResult = 1;
       this.scores[1] = this.scores[1] + 1;
       if (this.scores[1] == 3) {
         this.scores = [0, 0];
+        this.router.navigate(['/results', this.player2Name]);
       }
     }
   }
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     let name1 = this.route.snapshot.paramMap.get('player1');

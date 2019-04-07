@@ -2,12 +2,7 @@
 
 .content{
   display:grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 2em;
+  padding: 8em;
+  grid-template-columns: 1.5fr 1fr;
 }
 
-.content1{
-  
-  display:grid;
-  grid-template-columns: 2fr 1fr;
-}

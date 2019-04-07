@@ -11,7 +11,25 @@
   <mat-card class="players"> 
       <mat-card-content>
          <h1 class="mat-display-1" >Top Players!</h1>
-         <button>New Game</button>
+         <table class="table" cellspacing="10">
+           <thead>
+             <th>Name Player</th>
+             <th>Won Games</th>
+             <th>Lost Games</th>
+           </thead> 
+         <tbody>
+           <tr *ngFor="let value of values">
+           <td> {{value.namePlayer}}</td>
+           <td> {{value.wonGames}}</td>
+           <td> {{value.lostGames}}</td>
+          </tr>
+         </tbody>
+        </table>
+        <br>
+        <br>
+        <button mat-button color="primary" [routerLink]="['']" routerLinkActive=""  >Play Again!</button>
       </mat-card-content>
     </mat-card>
+
+   
 </div>

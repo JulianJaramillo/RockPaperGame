@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-result',
@@ -7,12 +8,24 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
+
+  values: any;
   public result;
-  constructor(private route: ActivatedRoute, ) { }
+
+  constructor(private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit() {
-    let nameWinner = this.route.snapshot.paramMap.get('winner');
+    const nameWinner = this.route.snapshot.paramMap.get('winner');
     this.result = nameWinner;
+    this.getValues();
+  }
+
+  getValues() {
+    this.http.get('http://localhost:5000/api/values').subscribe(response => {
+      this.values = response;
+    }, error => {
+      console.log(error);
+    });
   }
 
 }

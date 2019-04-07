@@ -13,6 +13,7 @@ import {
    MatInputModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       MatCheckboxModule,
       AppRoutingModule,
       MatFormFieldModule,
-      MatInputModule
+      MatInputModule,
+      HttpClientModule
    ],
    providers: [],
    bootstrap: [

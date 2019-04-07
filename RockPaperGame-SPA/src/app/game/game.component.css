@@ -30,17 +30,20 @@ p {
   margin-left: 70%;
   margin-top: 15%;
   width: 100%;
+  overflow: auto;
 }
 
 .player2 {
   margin-left: 70%;
   margin-top: 15%;
   width: 100%;
+  overflow: auto;
 }
 
 .scoreP {
   margin-top: -300px;
   width: 300px;
+  overflow: auto;
 }
 
 .flex-container {

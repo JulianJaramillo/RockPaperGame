@@ -47,5 +47,9 @@ p {
 }
 
 .selectedWeapon{
-  color: background;
+  color: blue;
+}
+
+.selectedWeaponEnemy{
+  color: red;
 }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private router: Router) { }
+  @ViewChild('player1') player1: any;
+  @ViewChild('player2') player2: any;
   ngOnInit() {
   }
 
+  onSelect(player1,player2){
+  this.router.navigate(['/game',player1,player2]);  
+  }
 }

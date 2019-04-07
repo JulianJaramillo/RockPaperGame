@@ -8,7 +8,18 @@
 
   <mat-card> 
       <mat-card-content>
-       <button [routerLink]="['/game']" routerLinkActive="router-link-active" >Jugar!</button>
+          <form>
+            <h1>Players!</h1>
+            <mat-form-field>
+              <textarea #player1 matInput placeholder="Player 1"></textarea>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+              <textarea #player2 matInput placeholder="Player 2"></textarea>
+            </mat-form-field>
+            <br>
+            <button mat-mini-fab color="primary" (click)="onSelect(player1.value,player2.value)">Play!</button>
+            </form>
       </mat-card-content>
     </mat-card>
 </div>

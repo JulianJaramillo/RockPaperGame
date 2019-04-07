@@ -9,10 +9,10 @@ import {
    MatCheckboxModule,
    MatCardModule,
    MatProgressSpinnerModule,
-   MatToolbarModule
+   MatToolbarModule,
+   MatFormFieldModule,
+   MatInputModule
 } from '@angular/material';
-import { GameComponent } from './game/game.component';
-import { HomeComponent } from './home/home.component';
 
 @NgModule({
    declarations: [
@@ -28,7 +28,9 @@ import { HomeComponent } from './home/home.component';
       MatProgressSpinnerModule,
       MatButtonModule,
       MatCheckboxModule,
-      AppRoutingModule
+      AppRoutingModule,
+      MatFormFieldModule,
+      MatInputModule
    ],
    providers: [],
    bootstrap: [

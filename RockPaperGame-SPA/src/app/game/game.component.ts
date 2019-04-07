@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-game',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
+  
+ public playerName;
+ public player2Name;
   scores = [0 , 0];
   weapons = [
     'rock',
@@ -61,9 +65,13 @@ export class GameComponent implements OnInit {
     }
  }
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    let name1 = this.route.snapshot.paramMap.get('player1');
+    let name2 = this.route.snapshot.paramMap.get('player2');
+    this.playerName = name1;
+    this.player2Name = name2;
   }
 
 }

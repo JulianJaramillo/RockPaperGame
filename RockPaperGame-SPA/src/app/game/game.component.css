@@ -1,66 +1,53 @@
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 p {
   font-family: Lato;
 }
 
-.content{
-  display:grid;
+.content {
+  display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 2em;
 }
-.flex-container{
-  display:flex;
-  width:100%;
+.flex-container {
+  display: flex;
+  width: 100%;
 }
 
-.flex-center{
+.flex-center {
   align-items: center;
   justify-content: center;
 }
 
-.score{
-  margin-top:.5em;
-  margin-left:2em;
-  font-size:1.5em;
+.score {
+  margin-top: 0.5em;
+  margin-left: 2em;
+  font-size: 1.5em;
 }
 
-.content2{
+.content2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.fa{
-  cursor:pointer;
-  font-size:5em;
+.fa {
+  cursor: pointer;
+  font-size: 5em;
 }
 
-.selectedWeapon{
-  color: blue;
-}
-
-.selectedWeaponEnemy{
-  color: red;
-}
-
-.player2{
-  display: none;
-}
-
-.player1{
+.player1 {
   margin-left: 70%;
   margin-top: 15%;
   width: 100%;
 }
 
-.player2{
+.player2 {
   margin-left: 70%;
   margin-top: 15%;
   width: 100%;
 }
 
-.scoreP{
-margin-top: -300px;
-width: 300px;
+.scoreP {
+  margin-top: -300px;
+  width: 300px;
 }

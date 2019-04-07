@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-game',
@@ -7,10 +7,11 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
-  
- public playerName;
- public player2Name;
-  scores = [0 , 0];
+
+  public playerName;
+  public player2Name;
+
+  scores = [0, 0];
   weapons = [
     'rock',
     'paper',
@@ -18,52 +19,53 @@ export class GameComponent implements OnInit {
   ]
   playerSelected = -1;
   isResultShow = false;
-  
+  isVisiblePlayer1 = true;
+  isVisiblePlayer2 = false;
+
   // theResult -  0 winner
   //              1 lose
   //              2 tie
-  theResult = 0 
-  enemySelected  = -1;
-  showClass= true;
+  theResult = 0
+  enemySelected = -1;
+  showClass = true;
 
- pick( weapon: number): void {
-   this.playerSelected = weapon;
- }
+  pick(weapon: number): void {
+    this.playerSelected = weapon;
+    this.isVisiblePlayer1 = false;
+    this.isVisiblePlayer2 = true;
+  }
 
- pickEnemy( weapon: number): void {
-  this.enemySelected = weapon;
-  this.checkResult();
-  this.isResultShow = true;
- }
+  pickEnemy(weapon: number): void {
+    this.enemySelected = weapon;
+    this.checkResult();
+    this.isResultShow = true;
+    this.isVisiblePlayer1 = true;
+    this.isVisiblePlayer2 = false;
+  }
 
- reset(): void {
-  this.scores = [0,0];
- }
- checkResult(): void {
-   const playerPick = this.playerSelected;
-   const enemyPick = this.enemySelected;
-  
-   if( playerPick == enemyPick){
-    this.theResult = 2;
-    }
+  reset(): void {
+    this.scores = [0, 0];
+  }
+  checkResult(): void {
+    const playerPick = this.playerSelected;
+    const enemyPick = this.enemySelected;
 
-    //You Win
-    else if ( (playerPick - enemyPick + 3)% 3 == 1)    {
+    if (playerPick == enemyPick) {
+      this.theResult = 2;
+    } else if ((playerPick - enemyPick + 3) % 3 == 1) {
       this.theResult = 0;
-      this.scores[0] = this.scores[0]+1;
-      if(this.scores[0] == 3){
-        this.scores = [0,0];
+      this.scores[0] = this.scores[0] + 1;
+      if (this.scores[0] == 3) {
+        this.scores = [0, 0];
       }
-    }
-    //You Lose
-    else{
+    } else {
       this.theResult = 1;
-      this.scores[1] = this.scores[1]+1;
-      if(this.scores[1] == 3){
-        this.scores = [0,0];
+      this.scores[1] = this.scores[1] + 1;
+      if (this.scores[1] == 3) {
+        this.scores = [0, 0];
       }
     }
- }
+  }
 
   constructor(private route: ActivatedRoute) { }
 

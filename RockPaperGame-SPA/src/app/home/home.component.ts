@@ -9,12 +9,14 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  // obtener y enviar parametros de los jugadores al componente de Game(juego)
   constructor(private router: Router) { }
   @ViewChild('player1') player1: any;
   @ViewChild('player2') player2: any;
   ngOnInit() {
   }
 
+  // Metodo para redereccionar la informacion de los jugadores al componente Game
   onSelect(player1, player2) {
     this.router.navigate(['/game', player1, player2]);
   }

@@ -7,6 +7,7 @@
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
     using RockPaperApp.API.Data;
+    using RockPaperApp.API.Models;
 
     [Route("api/[controller]")]
     [ApiController]
@@ -28,14 +29,13 @@
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Game game)
         {
+            if(ModelState.IsValid){
+               _context.Games.Add(game);
+               _context.SaveChanges();
+            }
         }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
     }
 }

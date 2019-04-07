@@ -46,12 +46,6 @@
 
 <div *ngIf="isResultShow" class="flex-container flex-center" style="flex-direction: column">
   <div [ngSwitch]="theResult">
-    <ng-template [ngSwitchCase]="0">
-      <h1 style="color: azure" > You're the winner! </h1>
-    </ng-template>
-    <ng-template [ngSwitchCase]="1">
-      <h1 style="color: azure"> You lose. </h1>
-    </ng-template>
     <ng-template [ngSwitchCase]="2">
       <h1 style="color: azure" >What battle!! </h1>
     </ng-template>

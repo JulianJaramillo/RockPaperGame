@@ -29,4 +29,5 @@ export class ResultComponent implements OnInit {
       console.log(error);
     });
   }
+
 }

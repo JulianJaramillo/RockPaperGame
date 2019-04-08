@@ -11,3 +11,16 @@ dotnet watch run, la librerias si isntancias por si solas de acuerdo al IDE.
 Y al mismo tiempo debe de ejecutarse el proyecto de angular.
 1. Se deben de instalar las libreras (node modules) con el comando npm install
 2. Se debe de ejecutar con el comando ng serve.
+
+El proyecto de .net contiene en si la base de datos utilizada
+
+El proyecto de angular se ejecuta en la url: http://localhost:4200/
+
+Reglas del Juego
+
+Primero se debe de ingresar los nombres de los jugadores
+Segundo se empieza el juego y termina cuando alguno de los 2 jugadores tiene un puntaje de 3
+Al finalizar mostrara el nombre del ganador y la informacion almacenada en la base datos con los datos de las partidas ganadas y perdidas
+Al igual de la opcion de comenzar un nuevo juego.
+
+Gracias por la atencion brindada.

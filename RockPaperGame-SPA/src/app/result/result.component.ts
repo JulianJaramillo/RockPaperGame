@@ -14,7 +14,7 @@ export class ResultComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private http: HttpClient) { }
 
-  // Se recibe el nombre de ganador 
+  // Se recibe el nombre de ganador
   ngOnInit() {
     const nameWinner = this.route.snapshot.paramMap.get('winner');
     this.result = nameWinner;
@@ -29,5 +29,4 @@ export class ResultComponent implements OnInit {
       console.log(error);
     });
   }
-
 }

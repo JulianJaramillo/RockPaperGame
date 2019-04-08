@@ -33,7 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
       AppRoutingModule,
       MatFormFieldModule,
       MatInputModule,
-      HttpClientModule
+      HttpClientModule,
    ],
    providers: [],
    bootstrap: [

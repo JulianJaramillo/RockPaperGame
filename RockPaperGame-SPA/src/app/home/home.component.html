@@ -9,11 +9,11 @@
           <form>
             <h1>Players!</h1>
             <mat-form-field>
-              <textarea  #player1 matInput placeholder="Player 1"></textarea>
+              <textarea  #player1 matInput placeholder="Player 1" required></textarea>
             </mat-form-field>
             <br>
             <mat-form-field>
-              <textarea #player2 matInput placeholder="Player 2"></textarea>
+              <textarea #player2 matInput placeholder="Player 2" required></textarea>
             </mat-form-field>
             <br>
             <button mat-mini-fab color="primary" (click)="onSelect(player1.value,player2.value)">Play!</button>

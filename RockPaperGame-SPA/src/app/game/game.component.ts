@@ -68,16 +68,16 @@ export class GameComponent implements OnInit {
       this.theResult = 0;
       this.scores[0] = this.scores[0] + 1;
       if (this.scores[0] === 3) {
-        this.postInfo(this.playerName,this.scores[0].toString(),this.scores[1].toString());
+        this.postInfo(this.playerName, this.scores[0].toString(), this.scores[1].toString());
         this.router.navigate(['/results', this.playerName]);
       }
     } else {
       this.theResult = 1;
       this.scores[1] = this.scores[1] + 1;
       if (this.scores[1] === 3) {
-        this.postInfo(this.player2Name,this.scores[0].toString(),this.scores[1].toString());
+        this.postInfo(this.player2Name, this.scores[1].toString(), this.scores[0].toString());
         this.scores = [0, 0];
-        this.router.navigate(['/results', this.player2Name]);  
+        this.router.navigate(['/results', this.player2Name]);
       }
     }
   }
@@ -92,7 +92,7 @@ export class GameComponent implements OnInit {
     this.player2Name = name2;
   }
 
-  // Consulta al servicio net core donde se almacenan los resultados de los jugadores
+  // Guardar Datos de los Jugadores en la BD
   postInfo(name: string, win: string, lost: string) {
     this.http.post('http://localhost:5000/api/values',
       {
@@ -104,7 +104,7 @@ export class GameComponent implements OnInit {
       (data: any) => {
         console.log(data);
       }
-    )
+    );
 
   }
 }

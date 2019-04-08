@@ -7,7 +7,7 @@ p {
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 2em;
+  padding: 1em;
 }
 
 .score {
@@ -54,4 +54,8 @@ p {
 .flex-center {
   align-items: center;
   justify-content: center;
+}
+
+.flex-center h1{
+  color: azure;
 }

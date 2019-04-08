@@ -18,6 +18,11 @@ export class HomeComponent implements OnInit {
 
   // Metodo para redereccionar la informacion de los jugadores al componente Game
   onSelect(player1, player2) {
-    this.router.navigate(['/game', player1, player2]);
+    if (player1 !== '' && player2 !== '') {
+      this.router.navigate(['/game', player1, player2]);
+    } else {
+      alert('The player has to be named');
+    }
+
   }
 }
